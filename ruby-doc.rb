@@ -224,7 +224,14 @@ end
 # a block is simply the terminology for a Proc that is passed to a method call
 10.times { puts "Hello"}
 	
+file.open(filename) {|f| puts f.read}
 
+# Arguments can passed to blocks between two veritcal pipes.
+10.times {|i| puts i}
+
+10.times do |i|
+	puts i
+end
 
 
 
