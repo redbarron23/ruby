@@ -264,6 +264,41 @@ combined comparison <=>
 
 # if 
 
+input = gets.chomp
+if input == 'quit'
+	exit
+elsif input == "hi"
+	puts "Hi, how are you?"
+else
+	puts "I don't understand you."
+end
+
+# unless is a negated if
+if !x
+	# do something
+end
+	
+unless x
+	# do something
+end
+
+# use it inline
+puts "Unauthorized" if role != 'admin'
+puts "Unauthorized" unless role == 'admin'
+
+# The ternary operator is a shorthand form of an if statement
+status = input > 10 ? "Number too big" : "ok"
+
+# case
+case x
+when expression
+	# do expression
+else
+	# otherwise
+end
+
+
+
 
 
 
