@@ -234,6 +234,37 @@ file.open(filename) {|f| puts f.read}
 end
 
 
+# Control Structures
+# Booleans
+# a boolean is a true or false value used in logical expressions.
+# Ruby's definition of truth is simple any value that is not nil
+# or the false in considered true.
+
+# Basic Comparison Operators
+equality ==
+inequality !=
+less than <
+greater than >
+less than or equal <=
+greater than or equal >=
+combined comparison <=>
+
+# Boolean expression can be combined using && and || and only return true if both
+# operands are true. The only difference betwen && and and is precedence with && being higher.
+
+'a' < 'b' && 2 > 1   # true
+1 <= 2 and 3 == 4    # false
+
+# || and 'or' evaluate to true if either operand is true, with the only differences being precedence
+
+1 == 2 || 'a' == 'a'  # true
+1 <= 2 or 3 == 4      # true
+1 == 2 || 3 == 4      # false
+
+
+# if 
+
+
 
 
 
