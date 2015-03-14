@@ -297,9 +297,62 @@ else
 	# otherwise
 end
 
+case x
+when 0
+	puts "x was 0"
+when 1..4
+	puts "x is between 1 and 4"
+when 5, 6..10
+	puts "x is one of these values"
+when array
+	puts " x was a value in array"
+when String
+	puts "x is a string"
+when /\d+\.\d+/
+	puts "x matched the Regexp"
+else
+	puts "nothing matched"
+end
 
+# While
+# While loops over a block of code as long as the given condition is true
 
+count = 0
+while count < 100
+	puts count
+	count +=1
+end
 
+# until
+# until is the negated form of while;
+# it will perform a loop until a condition is true.
+
+count = 0
+until count > 5
+	puts count
+	count += 1
+end
+
+# Altering loop
+* break - is used to stop looping
+* next  - can be used iny loop to skip the current iterator
+* redo  - can be used to retry the current iteration(be careful of initinite loops)
+* retry - starts the loop over at the beginning
+
+# Collections
+
+# Arrays
+a = ['Ruby', 99, 3.14]
+
+# indexing
+a[1] = 99
+
+# Arrays are dynamic; you can add and remove elements from them
+fruits = ['apple', 'banana']
+fruits << 'orange'
+fruits += ['kiwi']
+fruits |= ['apple']
+fruits.delete('apple')
 
 
 
