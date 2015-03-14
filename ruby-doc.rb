@@ -354,6 +354,15 @@ fruits += ['kiwi']
 fruits |= ['apple']
 fruits.delete('apple')
 
+# There are many methods for inspecting and manipulating Arrays
+fruits.first    # apple
+fruits.last     # kiwi
+fruits.join('.') # 
+fruits.length   
+[].empty?                          # true
+fruits.empty?                      # false
+[1, 2, 3].select {|x| x % 2 == 0}  # even
+
 
 
 
