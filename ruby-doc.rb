@@ -118,6 +118,15 @@ count = 5
 You have 5 cats?
 
 
+# Constants are CAPITALISED
+PI = 3.14
+
+
+2.1.1 :056 > PI = 3.141592
+(irb):56: warning: already initialized constant PI
+(irb):55: warning: previous definition of PI was here
+ => 3.141592
+
 # puts to STDOUT
 # print does not add new line to the end.
 ?> puts("Hello")
@@ -378,8 +387,39 @@ puts h['language']
 (1..5).include?(5)    # true
 (1...5).include?(5)   # false
 
+# ranges can be constructed using objects of any type, as long as the objects
+# can be compared using their <=> operator and they support the #succt method
+# to return the next object in sequence.
+2.1.1 :001 > require 'date'
+ => true
+2.1.1 :002 > jan1 = Date.new(2015, 1, 1)
+ => #<Date: 2015-01-01 ((2457024j,0s,0n),+0s,2299161j)>
+2.1.1 :003 > dec31 = Date.new(2015, 12, 31)
+ => #<Date: 2015-12-31 ((2457388j,0s,0n),+0s,2299161j)>
+2.1.1 :004 > (jan1..dec31).include?(Date.today)
+ => true
 
+2.1.1 :007 > jan2 = jan1.succ
+ => #<Date: 2015-01-02 ((2457025j,0s,0n),+0s,2299161j)>
 
+ # Iterators
+ # Iterators are used to loop over "enumerables", or objects that contain a collection
+ # for
+ for server in @servers 
+ 	next if server.offline?
+ 	redo if server.waiting?
+ 	break if server.process! job
+ end
+
+ # for is rarely used
+ # each is more widely used
+
+ # Instead, all Enumerable classes have an #each method which yields each element
+ fruits.each do |fruit|
+ 	puts fruits
+ end
+
+# Classes
 
 
 
