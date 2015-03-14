@@ -363,6 +363,21 @@ fruits.length
 fruits.empty?                      # false
 [1, 2, 3].select {|x| x % 2 == 0}  # even
 
+# Hashes
+# A Hash is a collection of key-value pairs defined using curl bracles {}
+h = {'language' => 'Ruby', 'framework' => 'Rails'}
+
+# strings must be quoted
+puts h['language']
+
+# Ranges
+# a Range represents an interval - set of values with a start and an end.
+(1..5).includes(3)   # true
+
+# Two dots are inclusive, while three dots excludes the last item.
+(1..5).include?(5)    # true
+(1...5).include?(5)   # false
+
 
 
 
