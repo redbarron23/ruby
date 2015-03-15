@@ -483,6 +483,45 @@ class Person
     public :sleep
 end
 
+* any method (public, protected or private) can be invoked dynamically using #send
+object.send(:method_name)
+
+# Getters and Setters
+# Instance variables are inherently private
+
+# Ruby allows you to define attribute getters and setters by appending=to the attribute name
+
+class Person
+	def initialize(name)
+		self.name = name
+	end
+	def name
+		@name
+	end
+	def name=(name)
+		@name = name
+	end
+end
+
+person = Person.new("Andreas")
+puts person.name
+person.name = "David"
+puts person.name
+
+# attr_accessor wraps up this common paradigm
+
+class Person
+	attr_accessor :name
+
+	def initialize(name)
+		self.name = name
+	end
+end
+
+
+
+
+
 
 
 
