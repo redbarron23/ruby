@@ -519,6 +519,39 @@ class Person
 end
 
 
+# Constants
+# Constants defined in a class/module are available within that class /module and 
+# outside the class with the scope operator ::
+
+class Person
+	DRINKING_AGE = 21
+
+	def can_drink?
+		@age >= DRINKING_AGE
+	end
+end
+
+Person::DRINKING_AGE
+
+# Constants cannot be defined in methods
+
+Modules
+# Modules in Ruby provide 2 different feature: namespacing and mixins
+# Modules can act as namespaces to avoid naming collisions
+
+module myApp
+	class Person
+		def initialize(name)
+			@name = name
+		end
+	end
+
+Myapp::Person.new("David")
+
+
+
+
+
 
 
 
