@@ -421,6 +421,68 @@ puts h['language']
 
 # Classes
 
+class Person
+end
+
+# objects(instances of clases) are created using #new
+p = Person.new
+
+# The #initialize method is a called when the object is created, or instantiated
+class Person
+	# Constructor
+	def initialize(name)
+	end
+end
+
+p = Person.new
+
+# Instance variables begin with an at sign(@)
+
+class Person
+	def initialize(name)
+		@name = name
+	end
+end
+
+Inheritance
+# Ruby supports single inheritance
+# All classes implicityl extend Object(http://www.ruby-doc.org/core/classes/Object.html)
+
+# Inheritance is declared using < and the class to inherit from
+
+class Programmer < Person
+	def initialize(name, favorite_ide)
+		super(name)
+		puts "class method invoked"
+	end
+
+	# instance method
+	def say_hi
+		puts "Hi"
+	end
+end
+
+# Methods can be public, protected, or private
+class Person
+	# implicitly public
+	def name
+		@name
+	end
+	protected
+	def grow_old
+		@age += 1
+	end
+    private
+    def shower
+    	@clean = true
+    end
+    def sleep
+    	@sleeping = true
+    end
+
+    public :sleep
+end
+
 
 
 
