@@ -545,6 +545,8 @@ module myApp
 			@name = name
 		end
 	end
+end
+
 
 Myapp::Person.new("David")
 
